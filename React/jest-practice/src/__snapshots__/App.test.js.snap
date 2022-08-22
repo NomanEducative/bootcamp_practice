@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matching Snapshots Matches Snapshot 1`] = `
+<div>
+  <h2
+    className="firstHeading"
+  >
+    Login Form
+  </h2>
+  <form
+    className="login"
+  >
+    <label
+      forHtml="email"
+    >
+      Email
+    </label>
+    <input
+      id="email"
+      name="email"
+      onBlur={[Function]}
+      type="text"
+    />
+    <label
+      className="passwordLabel"
+    >
+      Password
+    </label>
+    <input
+      id="password"
+      name="password"
+      onBlur={[Function]}
+      type="password"
+    />
+    <button
+      className="outlined-default"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </form>
+  <div
+    id="loginMessage"
+  >
+    <h2
+      className="message"
+    />
+  </div>
+</div>
+`;

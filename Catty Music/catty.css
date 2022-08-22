@@ -1,0 +1,184 @@
+html,body{
+    height: 100%;
+}
+body {
+    display: flex; /*flex superpowers activated! */
+    flex-direction: column; /*Stack the flex-items (main and footer elements) vertically NOT horizontally*/
+    background-color: #fff;
+    margin: 0;
+    font-family: Lato, sans-serif;
+    color: #222;
+    font-size: 0.9em;
+  }
+  main {
+    flex: 1 0 auto; /*fill the available space*/
+    display:flex
+  }
+
+  
+  aside {
+    flex: 0 0 40px; /*as a flex item: do not grow or shrink. Just stay fixed at 40px*/
+    display: flex; /*Now you're a flex-container, you can decide how your flex-items are laid*/
+    flex-direction: column; /*Stack my flex-item's vertically...change the default direction*/
+    justify-content: space-around; /*Interesting...since direction is changed, this works on the vertical direction*/
+    align-items: center; /*direction is changed! This affects the horizontal direction*/
+    background-color: #f2f2f2; /*make me pretty*/
+}
+
+/*font size for the icons*/
+aside i.fa {
+    font-size: 0.9em;
+}
+
+#image{
+    width:250px;
+    height:300px
+}
+
+.content {
+    display: flex;
+    flex: 1 0 auto; /*this makes sure the section grows o fill the entire available space*/
+    flex-direction: column;
+}
+.music-head {
+    flex: 0 0 280px; /*Same memo, don't grow or shrink - stay at 280px*/
+    display: flex;  
+    padding: 40px;
+    background-color: #4e4e4e;
+  }
+  
+  .music-list {
+      flex: 1 0 auto;
+      list-style-type: none;
+      padding: 5px 10px 0px;
+  }
+  li {
+    display: flex; /*Targets each list containing the paragraphs*/
+    padding: 0 20px;
+    min-height: 50px;
+  }
+  
+  li p {
+    flex: 0 0 25%; /*This is the sweet sauce*/
+  }
+  li span.catty-cloud {
+    border: 1px solid black;
+    font-size: 0.6em;
+    padding: 3px;
+  }
+  
+  li:nth-child(2n) {
+    background-color: #f2f2f2;
+  }
+  .catty-music{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    color: #fff;
+    padding-left: 50px;
+  }
+  
+  .catty-music div:nth-child(1){
+    margin-bottom: auto;
+  }
+  
+  .catty-music div:nth-child(2){
+    margin-top: 0;
+    background-color: a;
+
+  }
+  
+  .catty-music div:nth-child(2) i.fa{
+    font-size: 0.9em;
+    padding: 0 0.7em;
+    font-weight: 300;
+  }
+  .catty-music div:nth-child(1) p:first-child{
+    font-size: 1.8em;
+    margin: 0 0 10px;
+  }
+  
+  .catty-music div:nth-child(1) p:not(:first-child){
+    font-size: 0.9em;
+    margin: 2px 0;
+  }
+
+  #footerImage{
+    height:90px;
+    width:70px;
+  }
+  footer {
+    flex: 0 0 90px; /*don't grow or shrink - just stay at a height of 90px.*/
+    padding: 5px;
+    color: #fff;
+    background-color: rgba(61, 100, 158, .9);
+    display: flex;
+    justify-content: space-between;
+  }
+  .footerA{
+    display: flex;
+    flex: 2 0 0;
+    padding: 5px;
+
+  }
+  .footerB{
+    display: flex;
+    flex: 1 0 0;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+  
+  
+  
+  .footer2A{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+  }
+  @media screen and (max-width: 769px) {
+    .music-head{
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 auto;
+    }
+    
+    .catty-music div:nth-child(2){
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+    } 
+    .catty-music div:nth-child(1) p:not(:first-child){
+        display: none;
+    }
+    .catty-music div:nth-child(1) p:first-child
+    {
+       margin-top: 20px; 
+       font-size: 1rem;
+    }
+    li p:nth-child(2n){
+        display: none;
+    }
+    li p {
+        flex: 0 0 50%; /*This is the sweet sauce*/
+      }
+      .footerB i:nth-child(1){
+        display: none;
+      }
+      .footerB i:nth-child(6){
+        display: none;
+      }
+      .footerB i:nth-child(5){
+        display: none;
+      }
+      #footerImage{
+        display: none;
+      }
+      aside{
+        display: none;
+      }
+  }

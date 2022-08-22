@@ -1,0 +1,18 @@
+ul {
+    display: flex;
+			border: 1px solid red;
+			padding: 0;
+			list-style: none;
+			align-items: center;
+            flex-wrap: wrap;
+			min-height: 500px;
+			background-color: #e8e8e9;
+            padding: 30px;
+}
+li {
+  background-color: #8cacea;
+  margin: 8px;
+}
+li:first-child{
+    margin-right:  auto;
+}
